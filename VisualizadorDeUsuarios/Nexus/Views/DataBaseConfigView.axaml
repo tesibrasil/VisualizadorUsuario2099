@@ -1,0 +1,213 @@
+<Window xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:vm="using:TesiNexus.Nexus.ViewModels"
+             xmlns:i="clr-namespace:Avalonia.Xaml.Interactivity;assembly=Avalonia.Xaml.Interactivity"
+			 xmlns:ia="clr-namespace:Avalonia.Xaml.Interactions.Core;assembly=Avalonia.Xaml.Interactions"
+			 xmlns:icons="using:Material.Icons.Avalonia"
+			 mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450"
+			 Width="450" Height="450" MaxWidth="450" MaxHeight="450"
+             x:Class="TesiNexus.Nexus.Views.DataBaseConfigView"
+			 CornerRadius="10"
+			 Background="Transparent"
+			 TransparencyLevelHint="AcrylicBlur"
+			 WindowStartupLocation="CenterScreen"
+			 ExtendClientAreaToDecorationsHint="True" 
+			 CanResize="False" 
+		     IsEnabled="{Binding EnabledScreen, Mode=TwoWay}"
+			 >
+
+	<Design.DataContext>
+		<vm:DataBaseConfigViewModel/>
+	</Design.DataContext>
+
+	<Panel Background="Black" 
+		   Name="DataBaseScreen">
+
+		<ExperimentalAcrylicBorder IsHitTestVisible="False">
+			<ExperimentalAcrylicBorder.Material>
+				<ExperimentalAcrylicMaterial
+					BackgroundSource="Digger"
+					TintColor="Black"
+					TintOpacity="10"
+					MaterialOpacity="0.75" />
+			</ExperimentalAcrylicBorder.Material>
+
+		</ExperimentalAcrylicBorder>
+
+
+		<Grid Margin="30"  HorizontalAlignment="Center">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+
+			<Image
+				Grid.Row="0"
+				Grid.ColumnSpan="3"
+				Source="/Assets/TesiNexusBeW.png"
+				Opacity="400"
+				Margin="0 0 0 10"></Image>
+
+			<TextBlock Grid.ColumnSpan="3"
+					   Grid.Row="1"
+					   Background="Transparent"
+					   Foreground="{Binding ColorText, Mode=TwoWay}"
+					   FontSize="14"
+					   FontWeight="Bold"
+					   Width="400"
+					   TextWrapping="Wrap"
+					   TextAlignment="Center"
+					   Text="{Binding Mensagem, Mode=TwoWay}"></TextBlock>
+
+			<TextBlock Grid.Column="0"
+					   Grid.Row="2"
+					   Foreground="White"
+					   Text="Endereço de IP:"
+					   FontSize="16"
+					   HorizontalAlignment="Center"
+					   VerticalAlignment="Center">
+
+			</TextBlock>
+
+			<TextBox Grid.Column ="1"
+					 Grid.ColumnSpan="2"
+					 Grid.Row="2"
+					 Width="200"
+					 TextAlignment="Center"
+					 Classes="CustomTextBox"
+					 Watermark="Endereço de IP"
+					 Text="{Binding IP, Mode=TwoWay}"
+					 ToolTip.Tip="{Binding IP, Mode=TwoWay}"
+					 ToolTip.ShowDelay="1"
+					 HorizontalAlignment="Center"
+					 VerticalAlignment="Center">
+
+			</TextBox>
+
+			<TextBlock Grid.Column="0"
+					   Grid.Row="3"
+					   Foreground="White"
+					   Text="Usuário:"
+					   FontSize="16"
+					   HorizontalAlignment="Center"
+					   VerticalAlignment="Center">
+
+			</TextBlock>
+
+			<TextBox Grid.Column ="1"
+					 Grid.ColumnSpan="2"
+					 Grid.Row="3"
+					  Width="200"
+					 TextAlignment="Center"
+				     Classes="CustomTextBox"
+					 Watermark="Usuário"
+					 Text="{Binding User, Mode=TwoWay}"
+					 ToolTip.Tip="{Binding User, Mode=TwoWay}"
+					 ToolTip.ShowDelay="1"
+					 HorizontalAlignment="Center"
+					 VerticalAlignment="Center">
+
+			</TextBox>
+
+			<TextBlock Grid.Column="0"
+					   Grid.Row="4"
+					   Foreground="White"
+					   Text="Senha:"
+				   FontSize="16"
+					   HorizontalAlignment="Center"
+					   VerticalAlignment="Center">
+
+			</TextBlock>
+
+			<TextBox Grid.Column ="1"
+					 Grid.ColumnSpan="2"
+					 Grid.Row="4"
+					 Width="200"
+					 TextAlignment="Center"
+					 Classes="CustomTextBox"
+					 Watermark="Senha"
+					 PasswordChar="*"
+					 Text="{Binding Password, Mode=TwoWay}"
+	                 ToolTip.Tip="{Binding Password, Mode=TwoWay}"
+					 ToolTip.ShowDelay="1"
+					 HorizontalAlignment="Center"
+					 VerticalAlignment="Center">
+
+			</TextBox>
+
+
+			<Grid HorizontalAlignment="Center" ColumnDefinitions="100,100,100"
+				Grid.ColumnSpan="3"
+					Grid.Row="5">
+
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+
+				<Button
+				Grid.Column="0"
+				Width="100"
+				Height="50"
+				Content="Testar"
+				Command="{Binding Testar}"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				HorizontalContentAlignment="Center"
+				VerticalContentAlignment="Center"
+				Classes="ColorFont"
+				Margin="0 10 10 0"
+				>
+
+				</Button>
+
+
+				<Button Grid.Column="1"
+						Width="100"
+						Height="50"
+						Content="Salvar"
+						Command="{Binding Salvar}"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						HorizontalContentAlignment="Center"
+						VerticalContentAlignment="Center"
+						Classes="ColorFont"
+						Margin="20 10 20 0"
+					></Button>
+
+				<Button	Grid.Column="2"
+						Width="100"
+						Height="50"
+						Margin="10 10 0 0"
+						Content="Prep. Ambt."
+						Command="{Binding Ambiente}"
+						IsEnabled="{Binding HabAmbiente}"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						HorizontalContentAlignment="Center"
+						VerticalContentAlignment="Center"
+						Classes="ColorFont"
+					></Button>
+			</Grid>
+
+			<ProgressBar Grid.Row="6" IsVisible="{Binding EnabledProgress, Mode=TwoWay}"
+							Grid.ColumnSpan="3"  IsIndeterminate="True"></ProgressBar>
+
+		</Grid>
+	</Panel>
+
+</Window>

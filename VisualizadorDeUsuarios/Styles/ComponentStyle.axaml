@@ -1,0 +1,129 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<Design.PreviewWith>
+		<Border Padding="20">
+			<!-- Add Controls for Previewer Here -->
+		</Border>
+	</Design.PreviewWith>
+
+	<!--TextBox -->
+
+	<Style Selector="TextBox.CustomTextBox">
+		<Style.Setters>
+			<Setter Property="Background" Value="#818282" />
+		</Style.Setters>
+	</Style>
+
+	<Style Selector="TextBox.CustomTextBox:focus /template/ Border#PART_BorderElement">
+		<Setter Property="Background" Value="#818282" />
+	</Style>
+
+	<Style Selector="TextBox.CustomTextBox">
+		<Style.Setters>
+			<Setter Property="FontSize" Value="12" />
+		</Style.Setters>
+	</Style>
+
+	<!--TextBox-->
+	
+	<!--ComboBox-->
+
+	<Style Selector="ComboBox.CustomComboBox">
+		<Style.Setters>
+			<Setter Property="Background" Value="#818282" />
+		</Style.Setters>
+	</Style>
+
+	<Style Selector="ComboBox.CustomComboBox:focus /template/ Border#PART_BorderElement">
+		<Setter Property="Background" Value="#818282" />
+	</Style>
+	
+	<!--ComboBox-->
+
+
+	<!--Panel-->
+	
+	<Style Selector="Panel.PrimaryGray">
+		<Style.Setters>
+			<Setter Property="Background" Value="#8a8b8b" />
+
+		</Style.Setters>
+	</Style>
+
+	<Style Selector="Panel.SecondGray">
+		<Style.Setters>
+			<Setter Property="Background" Value="#525353" />
+
+		</Style.Setters>
+	</Style>
+
+	<Style Selector="Panel.ThirdGray">
+		<Style.Setters>
+			<Setter Property="Background" Value="#656565" />
+
+		</Style.Setters>
+	</Style>
+
+	<Style Selector="Panel.FourthGray">
+		<Style.Setters>
+			<Setter Property="Background" Value="#3c3c3c" />
+
+		</Style.Setters>
+	</Style>
+
+	<!--Panel-->
+	
+	<!--Border-->
+
+	<Style Selector="Border.ThirdGray">
+		<Style.Setters>
+			<Setter Property="Background" Value="#656565" />
+
+		</Style.Setters>
+	</Style>
+	
+	<Style Selector="Border.FourthGray">
+		<Style.Setters>
+			<Setter Property="Background" Value="#3c3c3c" />
+
+		</Style.Setters>
+	</Style>
+	
+	<!--Border-->
+
+	<!--Button-->
+
+	<Style Selector="Button.ColorButton">
+		<Style.Setters>
+			<Setter Property="Background" Value="Red"></Setter>
+		</Style.Setters>
+	</Style>
+
+	<Style Selector="Button.ColorFont">
+		<Style.Setters>
+			<Setter Property="Foreground" Value="Yellow"></Setter>
+		</Style.Setters>
+	</Style>
+
+	<!--Button-->
+
+	<!--ToggleButon-->
+
+	<Style Selector="ToggleButton.CustomToggleButton:checked /template/ ContentPresenter#PART_ContentPresenter">
+		<Style.Setters>
+			<Setter Property="Background" Value="Transparent"></Setter>
+		</Style.Setters>
+	</Style>
+	<Style Selector="ToggleButton.CustomToggleButton">
+		<Style.Setters>
+			<Setter Property="Background" Value="Transparent"></Setter>
+		</Style.Setters>
+	</Style>
+	
+	<!--ToggleButton-->
+	
+	
+	
+</Styles>
+
+

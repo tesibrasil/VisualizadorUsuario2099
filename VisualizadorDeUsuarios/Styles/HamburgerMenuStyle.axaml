@@ -1,0 +1,166 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:icon ="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia">
+
+
+	<Style Selector="StackPanel.StackMenu">
+		<Style.Setters>
+			<Setter Property="Background" Value="Transparent" />
+		</Style.Setters>
+	</Style>
+
+	<Style Selector="StackPanel.StackMenu:pointerover">
+		<Style.Setters>
+			<Setter Property="Background" Value="Gray" />
+
+		</Style.Setters>
+	</Style>
+
+
+	<Style Selector="RadioButton.HamMenuClose" >
+
+		<Style.Setters>
+			<Setter Property="Background" Value="Transparent" />
+			<Setter	Property="BorderThickness" Value="0" />
+			<Setter Property="Height" Value="50"></Setter>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate>
+						<Border VerticalAlignment="Center"
+							    HorizontalAlignment="Center"
+							    CornerRadius="100"
+							    Width="{TemplateBinding Property=Width}"
+							    Background="{TemplateBinding Background}">
+
+							<Grid>
+								<DockPanel>
+									<icon:MaterialIcon Kind="{Binding Name, RelativeSource={RelativeSource TemplatedParent}}"
+													   Margin="15,0,-15,0"/>
+
+									<TextBlock Text="{TemplateBinding Property=Content}"
+											   VerticalAlignment="Center"
+									           Margin="50,0,0,0"/>
+								</DockPanel>
+							</Grid>
+
+						</Border>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style.Setters>
+
+	</Style>
+
+	<Style Selector="RadioButton.HamMenuClose:pointerover" >
+
+		<Style.Setters>
+			<Setter Property="Background" Value="Transparent" />
+			<Setter	Property="BorderThickness" Value="0.5" />
+			<Setter Property="Cursor" Value="Hand" />
+			<Setter Property="IsChecked" Value="True"></Setter>
+			<Setter Property="Height" Value="50"></Setter>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate>
+						<Border VerticalAlignment="Stretch"
+							  HorizontalAlignment="Stretch"
+							  CornerRadius="100"
+							  Width="{TemplateBinding Property=Width}"
+							  Background="LightGray">
+
+							<Grid>
+								<DockPanel>
+									<icon:MaterialIcon Kind="{Binding Name, RelativeSource={RelativeSource TemplatedParent}}"
+													   Margin="15,0,-15,0" />
+
+									<TextBlock Text="{TemplateBinding Property=Content}"
+											   VerticalAlignment="Center"
+									           Margin="50,0,0,0"/>
+								</DockPanel>
+							</Grid>
+
+						</Border>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style.Setters>
+
+	</Style>
+
+	<Style Selector="RadioButton.HamMenuOpen" >
+
+		<Style.Setters>
+			<Setter Property="Background" Value="Transparent" />
+			<Setter	Property="Foreground" Value="White"/>
+			<Setter	Property="BorderThickness" Value="0" />
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate>
+						<Border VerticalAlignment="Center"
+							    HorizontalAlignment="Center"
+								Height="50"
+							    CornerRadius="100"
+							    Width="{TemplateBinding Property=Width}"
+							    Background="{TemplateBinding Background}">
+
+							<Grid>
+								<DockPanel>
+									<icon:MaterialIcon Kind="{Binding Name, RelativeSource={RelativeSource TemplatedParent}}"
+													   Margin="15,0,-15,0" 
+													   Foreground="White"/>
+
+									<TextBlock Text="{TemplateBinding Property=Content}"
+											   VerticalAlignment="Center"
+									           Margin="50,0,0,0"
+											   Foreground="White"/>
+								</DockPanel>
+							</Grid>
+
+						</Border>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style.Setters>
+
+	</Style>
+
+
+	<Style Selector="RadioButton.HamMenuOpen:pointerover" >
+
+		<Style.Setters>
+			<Setter Property="Background" Value="Transparent" />
+			<Setter	Property="BorderThickness" Value="0.5" />
+			<Setter	Property="BorderBrush" Value="Black" />
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate>
+						<Border VerticalAlignment="Stretch"
+							  HorizontalAlignment="Stretch"
+							  Height="50"
+							  CornerRadius="100"
+							  Width="{TemplateBinding Property=Width}"
+							  Background="LightGray">
+
+							<Grid>
+								<DockPanel>
+									<icon:MaterialIcon Kind="{Binding Name, RelativeSource={RelativeSource TemplatedParent}}"
+													   Margin="15,0,-15,0" />
+
+									<TextBlock Text="{TemplateBinding Property=Content}"
+											   VerticalAlignment="Center"
+									           Margin="50,0,0,0"/>
+								</DockPanel>
+							</Grid>
+
+						</Border>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style.Setters>
+		<Setter Property="Cursor" Value="Hand" />
+		<Setter Property="IsChecked" Value="True"></Setter>
+
+	</Style>    
+	
+	
+</Styles>
